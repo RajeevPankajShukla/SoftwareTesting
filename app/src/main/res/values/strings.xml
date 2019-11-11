@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">CalculatorApp</string>
+    <string name="app_name">MT2018_091_093</string>
     <string name="action_settings">Settings</string>
-    <string name="stdCal">Standard Calculator</string>
-    <string name="sciCal">Scientific Calculator</string>
+    <string name="stdCal">Nth Fibonacci Number</string>
+    <string name="sciCal">Calculate C(N,R)</string>
     <string name="unitCal">Unit Converter</string>
-    <string name="FullCal">Calculator App</string>
+    <string name="FullCal">MT2018_091_093</string>
     <string name="title_activity_standard_cal">StandardCal</string>
     <string name="title_activity_scientific_cal">ScientificCal</string>
     <string name="title_activity_unit_coverter">UnitCoverter</string>
