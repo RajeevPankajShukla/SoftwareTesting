@@ -56,56 +56,56 @@ public class ScientificCal extends AppCompatActivity {
         angleMode=((int)mode.getTag());
         switch (v.getId()) {
 
-            case R.id.toggle:
-                //change the button text if switch button is clicked
-                if(toggleMode==1)
-                {
-                    toggle.setTag(2);
-                    square.setText(R.string.cube);
-                    xpowy.setText(R.string.tenpow);
-                    log.setText(R.string.naturalLog);
-                    sin.setText(R.string.sininv);
-                    cos.setText(R.string.cosinv);
-                    tan.setText(R.string.taninv);
-                    sqrt.setText(R.string.cuberoot);
-                    fact.setText(R.string.Mod);
-                }
-                else if(toggleMode==2)
-                {
-                    toggle.setTag(3);
-                    square.setText(R.string.square);
-                    xpowy.setText(R.string.epown);
-                    log.setText(R.string.log);
-                    sin.setText(R.string.hyperbolicSine);
-                    cos.setText(R.string.hyperbolicCosine);
-                    tan.setText(R.string.hyperbolicTan);
-                    sqrt.setText(R.string.inverse);
-                    fact.setText(R.string.factorial);
-                }
-                else if(toggleMode==3)
-                {
-                    toggle.setTag(1);
-                    sin.setText(R.string.sin);
-                    cos.setText(R.string.cos);
-                    tan.setText(R.string.tan);
-                    sqrt.setText(R.string.sqrt);
-                    xpowy.setText(R.string.xpown);
-                }
-                break;
+//            case R.id.toggle:
+//                //change the button text if switch button is clicked
+//                if(toggleMode==1)
+//                {
+//                    toggle.setTag(2);
+//                    square.setText(R.string.cube);
+//                    xpowy.setText(R.string.tenpow);
+//                    log.setText(R.string.naturalLog);
+//                    sin.setText(R.string.sininv);
+//                    cos.setText(R.string.cosinv);
+//                    tan.setText(R.string.taninv);
+//                    sqrt.setText(R.string.cuberoot);
+//                    fact.setText(R.string.Mod);
+//                }
+//                else if(toggleMode==2)
+//                {
+//                    toggle.setTag(3);
+//                    square.setText(R.string.square);
+//                    xpowy.setText(R.string.epown);
+//                    log.setText(R.string.log);
+//                    sin.setText(R.string.hyperbolicSine);
+//                    cos.setText(R.string.hyperbolicCosine);
+//                    tan.setText(R.string.hyperbolicTan);
+//                    sqrt.setText(R.string.inverse);
+//                    fact.setText(R.string.factorial);
+//                }
+//                else if(toggleMode==3)
+//                {
+//                    toggle.setTag(1);
+//                    sin.setText(R.string.sin);
+//                    cos.setText(R.string.cos);
+//                    tan.setText(R.string.tan);
+//                    sqrt.setText(R.string.sqrt);
+//                    xpowy.setText(R.string.xpown);
+//                }
+//                break;
 
-            case R.id.mode:
-                //change the angle property for trignometric operations if mode button is clicked
-                if(angleMode==1)
-                {
-                    mode.setTag(2);
-                    mode.setText(R.string.mode2);
-                }
-                else
-                {
-                    mode.setTag(1);
-                    mode.setText(R.string.mode1);
-                }
-                break;
+//            case R.id.mode:
+//                //change the angle property for trignometric operations if mode button is clicked
+//                if(angleMode==1)
+//                {
+//                    mode.setTag(2);
+//                    mode.setText(R.string.mode2);
+//                }
+//                else
+//                {
+//                    mode.setTag(1);
+//                    mode.setText(R.string.mode1);
+//                }
+//                break;
 
             case R.id.num0:
                 e2.setText(e2.getText() + "0");
@@ -148,16 +148,16 @@ public class ScientificCal extends AppCompatActivity {
                 e2.setText(e2.getText() + "9");
                 break;
 
-            case R.id.pi:
-                e2.setText(e2.getText() + "pi");
-                break;
-
-            case R.id.dot:
-                if (count == 0 && e2.length() != 0) {
-                    e2.setText(e2.getText() + ".");
-                    count++;
-                }
-                break;
+//            case R.id.pi:
+//                e2.setText(e2.getText() + "pi");
+//                break;
+//
+//            case R.id.dot:
+//                if (count == 0 && e2.length() != 0) {
+//                    e2.setText(e2.getText() + ".");
+//                    count++;
+//                }
+//                break;
 
             case R.id.clear:
                 e1.setText("");
@@ -225,66 +225,66 @@ public class ScientificCal extends AppCompatActivity {
                 }
                 break;
 
-            case R.id.plus:
-                operationClicked("+");
-                break;
-
-            case R.id.minus:
-                operationClicked("-");
-                break;
-
-            case R.id.divide:
-                operationClicked("/");
-                break;
-
-            case R.id.multiply:
-                operationClicked("*");
-                break;
-
-            case R.id.sqrt:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    toggleMode=(int)toggle.getTag();
-                    if(toggleMode==1)
-                        e2.setText("sqrt(" + text + ")");
-                    else if(toggleMode==2)
-                        e2.setText("cbrt(" + text + ")");
-                    else
-                        e2.setText("1/(" + text + ")");
-                }
-                break;
-
-            case R.id.square:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(toggleMode==2)
-                        e2.setText("(" + text + ")^3");
-                    else
-                        e2.setText("(" + text + ")^2");
-                }
-                break;
-
-            case R.id.xpowy:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(toggleMode==1)
-                        e2.setText("(" + text + ")^");
-                    else if(toggleMode==2)
-                        e2.setText("10^(" + text + ")");
-                    else
-                        e2.setText("e^(" + text + ")");
-                }
-                break;
-
-            case R.id.log:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(toggleMode==2)
-                        e2.setText("ln(" + text + ")");
-                    else
-                        e2.setText("log(" + text + ")");
-                }
-                break;
+//            case R.id.plus:
+//                operationClicked("+");
+//                break;
+//
+//            case R.id.minus:
+//                operationClicked("-");
+//                break;
+//
+//            case R.id.divide:
+//                operationClicked("/");
+//                break;
+//
+//            case R.id.multiply:
+//                operationClicked("*");
+//                break;
+//
+//            case R.id.sqrt:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    toggleMode=(int)toggle.getTag();
+//                    if(toggleMode==1)
+//                        e2.setText("sqrt(" + text + ")");
+//                    else if(toggleMode==2)
+//                        e2.setText("cbrt(" + text + ")");
+//                    else
+//                        e2.setText("1/(" + text + ")");
+//                }
+//                break;
+//
+//            case R.id.square:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(toggleMode==2)
+//                        e2.setText("(" + text + ")^3");
+//                    else
+//                        e2.setText("(" + text + ")^2");
+//                }
+//                break;
+//
+//            case R.id.xpowy:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(toggleMode==1)
+//                        e2.setText("(" + text + ")^");
+//                    else if(toggleMode==2)
+//                        e2.setText("10^(" + text + ")");
+//                    else
+//                        e2.setText("e^(" + text + ")");
+//                }
+//                break;
+//
+//            case R.id.log:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(toggleMode==2)
+//                        e2.setText("ln(" + text + ")");
+//                    else
+//                        e2.setText("log(" + text + ")");
+//                }
+//                break;
 
             case R.id.factorial:
                 if (e2.length() != 0) {
@@ -335,91 +335,91 @@ public class ScientificCal extends AppCompatActivity {
                 }
                 break;
 
-            case R.id.sin:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(angleMode==1)
-                    {
-                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
-                        if(toggleMode==1)
-                            e2.setText("sin(" + angle + ")");
-                        else if(toggleMode==2)
-                            e2.setText("asind(" + text + ")");
-                        else
-                            e2.setText("sinh(" + text + ")");
-                    }
-                    else
-                    {
-                        if(toggleMode==1)
-                            e2.setText("sin(" + text + ")");
-                        else if(toggleMode==2)
-                            e2.setText("asin(" + text + ")");
-                        else
-                            e2.setText("sinh(" + text + ")");
-                    }
-                }
-                break;
-
-            case R.id.cos:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(angleMode==1)
-                    {
-                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
-                        if(toggleMode==1)
-                            e2.setText("cos(" + angle + ")");
-                        else if(toggleMode==2)
-                            e2.setText("acosd(" + text + ")");
-                        else
-                            e2.setText("cosh(" + text + ")");
-                    }
-                    else
-                    {
-                        if(toggleMode==1)
-                            e2.setText("cos(" + text + ")");
-                        else if(toggleMode==2)
-                            e2.setText("acos(" + text + ")");
-                        else
-                            e2.setText("cosh(" + text + ")");
-                    }
-                }
-                break;
-
-            case R.id.tan:
-                if (e2.length() != 0) {
-                    text = e2.getText().toString();
-                    if(angleMode==1)
-                    {
-                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
-                        if(toggleMode==1)
-                            e2.setText("tan(" + angle + ")");
-                        else if(toggleMode==2)
-                            e2.setText("atand(" + text + ")");
-                        else
-                            e2.setText("tanh(" + text + ")");
-                    }
-                    else
-                    {
-                        if(toggleMode==1)
-                            e2.setText("tan(" + text + ")");
-                        else if(toggleMode==2)
-                            e2.setText("atan(" + text + ")");
-                        else
-                            e2.setText("tanh(" + text + ")");
-                    }
-                }
-                break;
-
-            case R.id.posneg:
-                if (e2.length() != 0) {
-                    String s = e2.getText().toString();
-                    char arr[] = s.toCharArray();
-                    if (arr[0] == '-')
-                        e2.setText(s.substring(1, s.length()));
-                    else
-                        e2.setText("-" + s);
-                }
-                break;
+//            case R.id.sin:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(angleMode==1)
+//                    {
+//                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
+//                        if(toggleMode==1)
+//                            e2.setText("sin(" + angle + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("asind(" + text + ")");
+//                        else
+//                            e2.setText("sinh(" + text + ")");
+//                    }
+//                    else
+//                    {
+//                        if(toggleMode==1)
+//                            e2.setText("sin(" + text + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("asin(" + text + ")");
+//                        else
+//                            e2.setText("sinh(" + text + ")");
+//                    }
+//                }
+//                break;
+//
+//            case R.id.cos:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(angleMode==1)
+//                    {
+//                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
+//                        if(toggleMode==1)
+//                            e2.setText("cos(" + angle + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("acosd(" + text + ")");
+//                        else
+//                            e2.setText("cosh(" + text + ")");
+//                    }
+//                    else
+//                    {
+//                        if(toggleMode==1)
+//                            e2.setText("cos(" + text + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("acos(" + text + ")");
+//                        else
+//                            e2.setText("cosh(" + text + ")");
+//                    }
+//                }
+//                break;
+//
+//            case R.id.tan:
+//                if (e2.length() != 0) {
+//                    text = e2.getText().toString();
+//                    if(angleMode==1)
+//                    {
+//                        double angle=Math.toRadians(new ExtendedDoubleEvaluator().evaluate(text));
+//                        if(toggleMode==1)
+//                            e2.setText("tan(" + angle + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("atand(" + text + ")");
+//                        else
+//                            e2.setText("tanh(" + text + ")");
+//                    }
+//                    else
+//                    {
+//                        if(toggleMode==1)
+//                            e2.setText("tan(" + text + ")");
+//                        else if(toggleMode==2)
+//                            e2.setText("atan(" + text + ")");
+//                        else
+//                            e2.setText("tanh(" + text + ")");
+//                    }
+//                }
+//                break;
+//
+//            case R.id.posneg:
+//                if (e2.length() != 0) {
+//                    String s = e2.getText().toString();
+//                    char arr[] = s.toCharArray();
+//                    if (arr[0] == '-')
+//                        e2.setText(s.substring(1, s.length()));
+//                    else
+//                        e2.setText("-" + s);
+//                }
+//                break;
 
             case R.id.equal:
                 /*for more knowledge on DoubleEvaluator and its tutorial go to the below link
@@ -454,37 +454,37 @@ public class ScientificCal extends AppCompatActivity {
                 }
                 break;
 
-            case R.id.openBracket:
-                e1.setText(e1.getText() + "(");
-                break;
-
-            case R.id.closeBracket:
-                if(e2.length()!=0)
-                    e1.setText(e1.getText() +e2.getText().toString()+ ")");
-                else
-                    e1.setText(e1.getText() + ")");
-                break;
-
-            case R.id.history:
-                Intent i = new Intent(this, History.class);
-                i.putExtra("calcName", "SCIENTIFIC");
-                startActivity(i);
-                break;
+//            case R.id.openBracket:
+//                e1.setText(e1.getText() + "(");
+//                break;
+//
+//            case R.id.closeBracket:
+//                if(e2.length()!=0)
+//                    e1.setText(e1.getText() +e2.getText().toString()+ ")");
+//                else
+//                    e1.setText(e1.getText() + ")");
+//                break;
+//
+//            case R.id.history:
+//                Intent i = new Intent(this, History.class);
+//                i.putExtra("calcName", "SCIENTIFIC");
+//                startActivity(i);
+//                break;
         }
     }
 
-    private void operationClicked(String op) {
-        if (e2.length() != 0) {
-            String text = e2.getText().toString();
-            e1.setText(e1.getText() + text + op);
-            e2.setText("");
-            count = 0;
-        } else {
-            String text = e1.getText().toString();
-            if (text.length() > 0) {
-                String newText = text.substring(0, text.length() - 1) + op;
-                e1.setText(newText);
-            }
-        }
-    }
+//    private void operationClicked(String op) {
+//        if (e2.length() != 0) {
+//            String text = e2.getText().toString();
+//            e1.setText(e1.getText() + text + op);
+//            e2.setText("");
+//            count = 0;
+//        } else {
+//            String text = e1.getText().toString();
+//            if (text.length() > 0) {
+//                String newText = text.substring(0, text.length() - 1) + op;
+//                e1.setText(newText);
+//            }
+//        }
+//    }
 }

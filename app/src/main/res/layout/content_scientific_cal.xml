@@ -35,83 +35,97 @@
         android:gravity="end"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
+        android:onClick="onClick"
         android:text="@string/square"
-        android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/xpowy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/square"
-        android:layout_toRightOf="@+id/square"
         android:layout_toEndOf="@+id/square"
+        android:layout_toRightOf="@+id/square"
+        android:clickable="false"
+        android:onClick="onClick"
         android:text="@string/xpown"
-        android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="log"
         android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/xpowy"
-        android:layout_toRightOf="@+id/xpowy"
         android:layout_toEndOf="@+id/xpowy"
+        android:layout_toRightOf="@+id/xpowy"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="log"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sin"
         android:id="@+id/sin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/square"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="@string/sin"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cos"
         android:id="@+id/cos"
-        android:layout_alignBottom="@+id/sin"
-        android:layout_alignLeft="@+id/xpowy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/xpowy"
+        android:layout_alignLeft="@+id/xpowy"
+        android:layout_alignBottom="@+id/sin"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="@string/cos"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tan"
         android:id="@+id/tan"
-        android:layout_alignBottom="@+id/cos"
-        android:layout_toRightOf="@+id/cos"
-        android:layout_toEndOf="@+id/cos"
-        android:onClick="onClick"
-        android:textAllCaps="false"/>
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cos"
+        android:layout_toEndOf="@+id/cos"
+        android:layout_toRightOf="@+id/cos"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/tan"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
+
+    <Button
         android:id="@+id/toggle"
-        android:text="@string/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/sin"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:checked="false"
-        android:layout_toLeftOf="@+id/cos"
+        android:layout_alignParentLeft="true"
         android:layout_toStartOf="@+id/cos"
-        android:onClick="onClick" />
+        android:layout_toLeftOf="@+id/cos"
+        android:checked="false"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/toggle"
+        tools:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -125,25 +139,29 @@
         android:textAllCaps="false"/>
 
     <Button
+        android:id="@+id/sqrt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sqrt"
         android:layout_alignBottom="@+id/factorial"
-        android:layout_toRightOf="@+id/factorial"
         android:layout_toEndOf="@+id/factorial"
-        android:text="@string/sqrt"
+        android:layout_toRightOf="@+id/factorial"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="@string/sqrt"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/clear"
-        android:id="@+id/clear"
         android:layout_above="@+id/tan"
-        android:layout_toRightOf="@+id/log"
         android:layout_toEndOf="@+id/log"
-        android:onClick="onClick" />
+        android:layout_toRightOf="@+id/log"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/clear"
+        tools:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -156,15 +174,17 @@
         android:onClick="onClick" />
 
     <Button
+        android:id="@+id/pi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pi"
-        android:id="@+id/pi"
-        android:layout_alignBottom="@+id/sqrt"
-        android:layout_alignLeft="@+id/backSpace"
         android:layout_alignStart="@+id/backSpace"
+        android:layout_alignLeft="@+id/backSpace"
+        android:layout_alignBottom="@+id/sqrt"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="@string/pi"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -257,15 +277,17 @@
         android:onClick="onClick" />
 
     <Button
+        android:id="@+id/posneg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/posneg"
-        android:id="@+id/posneg"
         android:layout_below="@+id/num1"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/posneg"
         android:textSize="20dp"
-        android:onClick="onClick" />
+        tools:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -278,57 +300,67 @@
         android:onClick="onClick" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="."
         android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/num0"
-        android:layout_toRightOf="@+id/num0"
         android:layout_toEndOf="@+id/num0"
-        android:textSize="20dp"
+        android:layout_toRightOf="@+id/num0"
+        android:clickable="false"
         android:nestedScrollingEnabled="false"
-        android:onClick="onClick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/divide"
-        android:id="@+id/divide"
-        android:layout_above="@+id/num6"
-        android:layout_toRightOf="@+id/num9"
-        android:layout_toEndOf="@+id/num9"
-        android:onClick="onClick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="x"
-        android:id="@+id/multiply"
-        android:layout_above="@+id/num3"
-        android:layout_alignLeft="@+id/divide"
-        android:layout_alignStart="@+id/divide"
-        android:onClick="onClick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/minus"
-        android:layout_above="@+id/dot"
-        android:layout_alignLeft="@+id/multiply"
-        android:layout_alignStart="@+id/multiply"
+        android:onClick="onClick"
+        android:text="."
         android:textSize="20dp"
-        android:onClick="onClick" />
+        tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:layout_above="@+id/num6"
+        android:layout_toEndOf="@+id/num9"
+        android:layout_toRightOf="@+id/num9"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/divide"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/num3"
+        android:layout_alignStart="@+id/divide"
+        android:layout_alignLeft="@+id/divide"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="x"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dot"
+        android:layout_alignStart="@+id/multiply"
+        android:layout_alignLeft="@+id/multiply"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="-"
+        android:textSize="20dp"
+        tools:visibility="invisible" />
+
+    <Button
         android:id="@+id/plus"
-        android:layout_alignBottom="@+id/dot"
-        android:layout_alignLeft="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/minus"
-        android:onClick="onClick" />
+        android:layout_alignLeft="@+id/minus"
+        android:layout_alignBottom="@+id/dot"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="+"
+        tools:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -341,44 +373,52 @@
         android:layout_toEndOf="@+id/num0" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/openBracket"
         android:id="@+id/openBracket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/equal"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClick"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/closeBracket"
-        android:id="@+id/closeBracket"
-        android:layout_alignBottom="@+id/equal"
-        android:layout_toRightOf="@+id/openBracket"
-        android:layout_toEndOf="@+id/openBracket"
-        android:onClick="onClick"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mode1"
-        android:id="@+id/mode"
-        android:layout_alignBottom="@+id/equal"
-        android:layout_toRightOf="@+id/equal"
-        android:layout_toEndOf="@+id/equal"
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
         android:onClick="onClick"
-        android:textAllCaps="false"/>
+        android:text="@string/openBracket"
+        tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/closeBracket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/equal"
+        android:layout_toEndOf="@+id/openBracket"
+        android:layout_toRightOf="@+id/openBracket"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/closeBracket"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/equal"
+        android:layout_toEndOf="@+id/equal"
+        android:layout_toRightOf="@+id/equal"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/mode1"
+        android:textAllCaps="false"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/history"
-        android:id="@+id/history"
         android:layout_below="@+id/openBracket"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClick"/>
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
+        android:onClick="onClick"
+        android:text="@string/history"
+        tools:visibility="invisible" />
 
 </RelativeLayout>

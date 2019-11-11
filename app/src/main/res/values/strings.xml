@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MT2018_091_093</string>
     <string name="action_settings">Settings</string>
-    <string name="stdCal">Nth Fibonacci Number</string>
-    <string name="sciCal">Calculate C(N,R)</string>
+    <string name="stdCal">Calculate C(N,R)</string>
+    <string name="sciCal">Factorial</string>
     <string name="unitCal">Unit Converter</string>
     <string name="FullCal">MT2018_091_093</string>
     <string name="title_activity_standard_cal">StandardCal</string>
