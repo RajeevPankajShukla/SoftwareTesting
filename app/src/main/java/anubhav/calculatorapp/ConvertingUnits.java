@@ -8,57 +8,57 @@ package anubhav.calculatorapp;
 public class ConvertingUnits
 {
     //class to convert units of area
-    static class Area{
-        public double sqMilliToMeter(double milli)
-        {
-            return (milli/1000000);
-        }
-
-        public double sqMeterToMilli(double meter)
-        {
-            return (meter*1000000);
-        }
-
-        public double sqCentiToMeter(double Centi)
-        {
-            return (Centi/10000);
-        }
-
-        public double sqMeterToCenti(double meter)
-        {
-            return (meter*10000);
-        }
-
-        public double sqKiloToMeter(double Kilo)
-        {
-            return (Kilo*1000000);
-        }
-
-        public double sqMeterToKilo(double meter)
-        {
-            return (meter/1000000);
-        }
-
-        public double AcreToMeter(double acre)
-        {
-            return (acre*4046.86);
-        }
-
-        public double sqMeterToAcre(double meter)
-        {
-            return (meter/4046.86);
-        }
-
-        public double HectareToMeter(double Hectare)
-        {
-            return (Hectare*10000);
-        }
-
-        public double sqMeterToHectare(double meter)
-        {
-            return (meter/10000);
-        }
-    }
+//    static class Area{
+//        public double sqMilliToMeter(double milli)
+//        {
+//            return (milli/1000000);
+//        }
+//
+//        public double sqMeterToMilli(double meter)
+//        {
+//            return (meter*1000000);
+//        }
+//
+//        public double sqCentiToMeter(double Centi)
+//        {
+//            return (Centi/10000);
+//        }
+//
+//        public double sqMeterToCenti(double meter)
+//        {
+//            return (meter*10000);
+//        }
+//
+//        public double sqKiloToMeter(double Kilo)
+//        {
+//            return (Kilo*1000000);
+//        }
+//
+//        public double sqMeterToKilo(double meter)
+//        {
+//            return (meter/1000000);
+//        }
+//
+//        public double AcreToMeter(double acre)
+//        {
+//            return (acre*4046.86);
+//        }
+//
+//        public double sqMeterToAcre(double meter)
+//        {
+//            return (meter/4046.86);
+//        }
+//
+//        public double HectareToMeter(double Hectare)
+//        {
+//            return (Hectare*10000);
+//        }
+//
+//        public double sqMeterToHectare(double meter)
+//        {
+//            return (meter/10000);
+//        }
+//    }
 
     //class to convert units of length
     static class Length{
@@ -167,77 +167,77 @@ public class ConvertingUnits
         }
     }
 
-    //class to convert units of mass/weight
-    static class Weight
-    {
-        public double MilliToKilo(double milli)
-        {
-            return (milli/1000000);
-        }
-
-        public double KiloToMilli(double Kilo)
-        {
-            return (Kilo*1000000);
-        }
-
-        public double GramToKilo(double Gram)
-        {
-            return (Gram/1000);
-        }
-
-        public double KiloToGram(double Kilo)
-        {
-            return (Kilo*1000);
-        }
-
-        public double CentiToKilo(double Centi)
-        {
-            return (Centi/100000);
-        }
-
-        public double KiloToCenti(double Kilo)
-        {
-            return (Kilo*100000);
-        }
-
-        public double DeciToKilo(double Deci)
-        {
-            return (Deci/10000);
-        }
-
-        public double KiloToDeci(double Kilo)
-        {
-            return (Kilo*10000);
-        }
-
-        public double MetricTonnesToKilo(double MetricTonnes)
-        {
-            return (MetricTonnes*1000);
-        }
-
-        public double KiloToMetricTonnes(double Kilo)
-        {
-            return (Kilo/1000);
-        }
-
-        public double PoundsToKilo(double Pounds)
-        {
-            return (Pounds/2.20462);
-        }
-
-        public double KiloToPounds(double Kilo)
-        {
-            return (Kilo*2.20462);
-        }
-
-        public double OuncesToKilo(double Ounces)
-        {
-            return (Ounces/35.274);
-        }
-
-        public double KiloToOunces(double Kilo)
-        {
-            return (Kilo*35.274);
-        }
-    }
+//    //class to convert units of mass/weight
+//    static class Weight
+//    {
+//        public double MilliToKilo(double milli)
+//        {
+//            return (milli/1000000);
+//        }
+//
+//        public double KiloToMilli(double Kilo)
+//        {
+//            return (Kilo*1000000);
+//        }
+//
+//        public double GramToKilo(double Gram)
+//        {
+//            return (Gram/1000);
+//        }
+//
+//        public double KiloToGram(double Kilo)
+//        {
+//            return (Kilo*1000);
+//        }
+//
+//        public double CentiToKilo(double Centi)
+//        {
+//            return (Centi/100000);
+//        }
+//
+//        public double KiloToCenti(double Kilo)
+//        {
+//            return (Kilo*100000);
+//        }
+//
+//        public double DeciToKilo(double Deci)
+//        {
+//            return (Deci/10000);
+//        }
+//
+//        public double KiloToDeci(double Kilo)
+//        {
+//            return (Kilo*10000);
+//        }
+//
+//        public double MetricTonnesToKilo(double MetricTonnes)
+//        {
+//            return (MetricTonnes*1000);
+//        }
+//
+//        public double KiloToMetricTonnes(double Kilo)
+//        {
+//            return (Kilo/1000);
+//        }
+//
+//        public double PoundsToKilo(double Pounds)
+//        {
+//            return (Pounds/2.20462);
+//        }
+//
+//        public double KiloToPounds(double Kilo)
+//        {
+//            return (Kilo*2.20462);
+//        }
+//
+//        public double OuncesToKilo(double Ounces)
+//        {
+//            return (Ounces/35.274);
+//        }
+//
+//        public double KiloToOunces(double Kilo)
+//        {
+//            return (Kilo*35.274);
+//        }
+//    }
 }
