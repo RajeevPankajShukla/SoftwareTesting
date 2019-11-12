@@ -45,6 +45,7 @@
         android:onClick="onClick"
         android:text="@string/square"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -58,6 +59,7 @@
         android:onClick="onClick"
         android:text="@string/xpown"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -71,6 +73,7 @@
         android:onClick="onClick"
         android:text="log"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -84,6 +87,7 @@
         android:onClick="onClick"
         android:text="@string/sin"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -97,6 +101,7 @@
         android:onClick="onClick"
         android:text="@string/cos"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -110,6 +115,7 @@
         android:onClick="onClick"
         android:text="@string/tan"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -125,6 +131,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/toggle"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -149,6 +156,7 @@
         android:onClick="onClick"
         android:text="@string/sqrt"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -161,6 +169,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/clear"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -184,6 +193,7 @@
         android:onClick="onClick"
         android:text="@string/pi"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -287,6 +297,7 @@
         android:onClick="onClick"
         android:text="@string/posneg"
         android:textSize="20dp"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -311,6 +322,7 @@
         android:onClick="onClick"
         android:text="."
         android:textSize="20dp"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -323,6 +335,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/divide"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -335,6 +348,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="x"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -348,6 +362,7 @@
         android:onClick="onClick"
         android:text="-"
         android:textSize="20dp"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -360,17 +375,20 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="+"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/equal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="="
-        android:id="@+id/equal"
-        android:onClick="onClick"
         android:layout_below="@+id/num0"
+        android:layout_toEndOf="@+id/num0"
         android:layout_toRightOf="@+id/num0"
-        android:layout_toEndOf="@+id/num0" />
+        android:onClick="onClick"
+        android:text="="
+        android:visibility="invisible"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/openBracket"
@@ -382,6 +400,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/openBracket"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -394,6 +413,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/closeBracket"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -407,6 +427,7 @@
         android:onClick="onClick"
         android:text="@string/mode1"
         android:textAllCaps="false"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -419,6 +440,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="@string/history"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
 </RelativeLayout>

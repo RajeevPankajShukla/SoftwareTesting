@@ -23,6 +23,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="Area"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
@@ -45,6 +46,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="Weight"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
     <Button
