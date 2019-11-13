@@ -300,7 +300,7 @@ public class ScientificCal extends AppCompatActivity {
                         try
                         {
                             CalculateFactorial cf=new CalculateFactorial();
-                            int []arr=cf.factorial((int)Double.parseDouble(String.valueOf(new ExtendedDoubleEvaluator().evaluate(text))));
+                            int []arr=cf.factorial1((int)Double.parseDouble(String.valueOf(new ExtendedDoubleEvaluator().evaluate(text))));
                             int res_size=cf.getRes();
                             if(res_size>20)
                             {

@@ -219,8 +219,12 @@ public class StandardCal extends AppCompatActivity {
 //                }
             int n = Integer.parseInt(e1.getText().toString());
             int k = Integer.parseInt(e2.getText().toString());
-
-            e2.setText(Combination(n,k));
+            String ans = "";
+            if(k>n)
+                ans = "k should be smaller than n";
+            else
+                ans = Integer.toString(Combination(n,k));
+            e2.setText(ans);
             e1.setText(" ");
             break;
 
@@ -233,15 +237,16 @@ public class StandardCal extends AppCompatActivity {
                 break;
 
             case R.id.history:
-                Intent i=new Intent(this,History.class);
+                Intent i = new Intent(this,History.class);
                 i.putExtra("calcName","STANDARD");
                 startActivity(i);
                 break;
         }
     }
 
-    private String Combination(int n,int k)
+    public int Combination(int n,int k)
     {
+
         int C[] = new int[k + 1];
         // nC0 is 1
         C[0] = 1;
@@ -252,7 +257,7 @@ public class StandardCal extends AppCompatActivity {
             for (int j = Math.min(i, k); j > 0; j--)
                 C[j] = C[j] + C[j - 1];
         }
-        return Integer.toString(C[k]);
+        return C[k];
     }
     private void operationClicked(String op)
     {

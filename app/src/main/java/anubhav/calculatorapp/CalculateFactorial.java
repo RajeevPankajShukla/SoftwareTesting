@@ -10,6 +10,7 @@ public class CalculateFactorial
     private int res_size;
     private int res[]=new int[MAX];
 
+
     CalculateFactorial()
     {
         res_size = 1;
@@ -21,7 +22,7 @@ public class CalculateFactorial
     }
 
     // This function finds factorial of large numbers and prints them
-    public int[] factorial(int n)
+    public int[] factorial1(int n)
     {
         // Initialize result
         res[0] = 1;
@@ -75,5 +76,13 @@ public class CalculateFactorial
             r++;
         }
         return r;
+    }
+
+    public int factorial(int n)
+    {
+        int res = 1, i;
+        for (i=2; i<=n; i++)
+            res *= i;
+        return res;
     }
 }
