@@ -21,8 +21,8 @@ public class UnitLengthTest {
     public void evaluate_equalMetric() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 1;
-        int choice2 = 1;
+        int choice1 = 3;
+        int choice2 = 3;
         double val = 20.0;
         double expVal = 20.0;
         try {
@@ -38,8 +38,8 @@ public class UnitLengthTest {
     public void evaluate_nanoToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 1;
-        int choice2 = 4;
+        int choice1 = 0;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 0.000000002;
         try {
@@ -51,12 +51,13 @@ public class UnitLengthTest {
         }
     }
 
+
     @Test
     public void evaluate_milliToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 2;
-        int choice2 = 4;
+        int choice1 = 1;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 0.002;
         try {
@@ -72,8 +73,8 @@ public class UnitLengthTest {
     public void evaluate_centiToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 3;
-        int choice2 = 4;
+        int choice1 = 2;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 0.02;
         try {
@@ -89,8 +90,8 @@ public class UnitLengthTest {
     public void evaluate_kiloToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 5;
-        int choice2 = 4;
+        int choice1 = 4;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 2000.0;
         try {
@@ -106,8 +107,8 @@ public class UnitLengthTest {
     public void evaluate_inchToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 6;
-        int choice2 = 4;
+        int choice1 = 5;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 78.7402;
         try {
@@ -123,8 +124,8 @@ public class UnitLengthTest {
     public void evaluate_footToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 7;
-        int choice2 = 4;
+        int choice1 = 6;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 6.56168;
         try {
@@ -140,8 +141,8 @@ public class UnitLengthTest {
     public void evaluate_yardToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 8;
-        int choice2 = 4;
+        int choice1 = 7;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 1.8287988;
         try {
@@ -157,8 +158,8 @@ public class UnitLengthTest {
     public void evaluate_mileToMeter() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 9;
-        int choice2 = 4;
+        int choice1 = 8;
+        int choice2 = 3;
         double val = 2.0;
         double expVal = 3218.688995;
         try {
