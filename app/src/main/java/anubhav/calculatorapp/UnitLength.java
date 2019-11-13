@@ -14,7 +14,7 @@ public class UnitLength extends AppCompatActivity {
     private EditText e1,e2;
     private Spinner s1,s2;
     private int count1=0;
-    private ConvertingUnits.Length ca;
+//    private ConvertingUnits.Length ca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class UnitLength extends AppCompatActivity {
         s1=(Spinner)findViewById(R.id.spinner1);
         s2=(Spinner)findViewById(R.id.spinner2);
 
-        ca=new ConvertingUnits.Length();
+//        ca=new ConvertingUnits.Length();
     }
 
     public void onClick(View v)
@@ -119,59 +119,75 @@ public class UnitLength extends AppCompatActivity {
             switch (item1)
             {
                 case 0:
-                    temp=ca.NanoToMeter(value);
+//                    temp=ca.NanoToMeter(value);
+                    temp = value/1000000000;
                     break;
                 case 1:
-                    temp=ca.MilliToMeter(value);
+//                    temp=ca.MilliToMeter(value);
+                    temp = (value)/1000;
                     break;
                 case 2:
-                    temp=ca.CentiToMeter(value);
+//                    temp=ca.CentiToMeter(value);
+                    temp = (value)/100;
                     break;
                 case 3:
-                    temp=value;
+                    temp = value;
                     break;
                 case 4:
-                    temp=ca.KiloToMeter(value);
+//                    temp=ca.KiloToMeter(value);
+                    temp = value*1000;
                     break;
                 case 5:
-                    temp=ca.InchToMeter(value);
+//                    temp=ca.InchToMeter(value);
+                    temp = (value)/39.3701;
                     break;
                 case 6:
-                    temp=ca.FootToMeter(value);
+//                    temp=ca.FootToMeter(value);
+                    temp = (value)/3.28084;
                     break;
                 case 7:
-                    temp=ca.YardToMeter(value);
+//                    temp=ca.YardToMeter(value);
+                    temp = (value)/1.09361;
                     break;
                 case 8:
-                    temp=ca.MileToMeter(value);
+//                    temp=ca.MileToMeter(value);
+                    temp = (value)/0.000621371;
                     break;
             }
 
             switch (item2)
             {
                 case 0:
-                    temp=ca.MeterToNano(temp);
+//                    temp=ca.MeterToNano(temp);
+                    temp = (temp)*1000000000;
                     break;
                 case 1:
-                    temp=ca.MeterToMilli(temp);
+//                    temp=ca.MeterToMilli(temp);
+                    temp = (temp)*1000;
                     break;
                 case 2:
-                    temp=ca.MeterToCenti(temp);
+//                    temp=ca.MeterToCenti(temp);
+                    temp = (temp)*100;
                     break;
                 case 4:
-                    temp=ca.MeterToKilo(temp);
+//                    temp=ca.MeterToKilo(temp);
+                    temp = (temp)/1000;
                     break;
                 case 5:
-                    temp=ca.MeterToInch(temp);
+//                    temp=ca.MeterToInch(temp);
+                    temp = (temp)*39.3701;
                     break;
                 case 6:
-                    temp=ca.MeterToFoot(temp);
+//                    temp=ca.MeterToFoot(temp);
+                    temp = (temp)*3.28084;
                     break;
                 case 7:
-                    temp=ca.MeterToYard(temp);
+//                    temp=ca.MeterToYard(temp);
+                    temp = (temp)*1.09361;
                     break;
                 case 8:
-                    temp=ca.MeterToMile(temp);
+//                    temp=ca.MeterToMile(temp);
+                    temp = (temp)*0.000621371;
                     break;
             }
             return temp;

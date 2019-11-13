@@ -14,7 +14,7 @@ public class UnitTemperature extends AppCompatActivity {
     private EditText e1,e2;
     private Spinner s1,s2;
     private int count1=0;
-    private ConvertingUnits.Temperature ca;
+//    private ConvertingUnits.Temperature ca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class UnitTemperature extends AppCompatActivity {
         s1=(Spinner)findViewById(R.id.spinner1);
         s2=(Spinner)findViewById(R.id.spinner2);
 
-        ca=new ConvertingUnits.Temperature();
+//        ca=new ConvertingUnits.Temperature();
     }
 
     public void onClick(View v)
@@ -119,10 +119,12 @@ public class UnitTemperature extends AppCompatActivity {
             switch (item1)
             {
                 case 0:
-                    temp=ca.CelsiTokelvin(value);
+//                    temp = ca.CelsiTokelvin(value);
+                    temp = value + 273.15;
                     break;
                 case 1:
-                    temp=ca.FerToKelvin(value);
+//                    temp = ca.FerToKelvin(value);
+                    temp = ((value +459.67)*5/9);
                     break;
                 case 2:
                     temp=value;
@@ -132,10 +134,12 @@ public class UnitTemperature extends AppCompatActivity {
             switch (item2)
             {
                 case 0:
-                    temp=ca.KelvinToCelsi(temp);
+//                    temp = ca.KelvinToCelsi(temp);
+                    temp = (temp-273.15);
                     break;
                 case 1:
-                    temp=ca.KelvinToFer(temp);
+//                    temp=ca.KelvinToFer(temp);
+                    temp = ((temp*9/5)-459.67);
                     break;
             }
             return temp;
