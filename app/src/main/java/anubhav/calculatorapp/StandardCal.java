@@ -35,54 +35,54 @@ public class StandardCal extends AppCompatActivity {
     {
         switch(v.getId())
         {
-//            case R.id.num0:
-//                e2.setText(e2.getText()+"0");
-//                break;
-//
-//            case R.id.num1:
-//                e2.setText(e2.getText()+"1");
-//                break;
-//
-//            case R.id.num2:
-//                e2.setText(e2.getText()+"2");
-//                break;
-//
-//            case R.id.num3:
-//                e2.setText(e2.getText()+"3");
-//                break;
-//
-//
-//            case R.id.num4:
-//                e2.setText(e2.getText()+"4");
-//                break;
-//
-//            case R.id.num5:
-//                e2.setText(e2.getText()+"5");
-//                break;
-//
-//            case R.id.num6:
-//                e2.setText(e2.getText()+"6");
-//                break;
-//
-//            case R.id.num7:
-//                e2.setText(e2.getText()+"7");
-//                break;
-//
-//            case R.id.num8:
-//                e2.setText(e2.getText()+"8");
-//                break;
-//
-//            case R.id.num9:
-//                e2.setText(e2.getText()+"9");
-//                break;
+            case R.id.num0:
+                e2.setText(e2.getText()+"0");
+                break;
 
-//            case R.id.dot:
-//                if(count==0 && e2.length()!=0)
-//                {
-//                    e2.setText(e2.getText()+".");
-//                    count++;
-//                }
-//                break;
+            case R.id.num1:
+                e2.setText(e2.getText()+"1");
+                break;
+
+            case R.id.num2:
+                e2.setText(e2.getText()+"2");
+                break;
+
+            case R.id.num3:
+                e2.setText(e2.getText()+"3");
+                break;
+
+
+            case R.id.num4:
+                e2.setText(e2.getText()+"4");
+                break;
+
+            case R.id.num5:
+                e2.setText(e2.getText()+"5");
+                break;
+
+            case R.id.num6:
+                e2.setText(e2.getText()+"6");
+                break;
+
+            case R.id.num7:
+                e2.setText(e2.getText()+"7");
+                break;
+
+            case R.id.num8:
+                e2.setText(e2.getText()+"8");
+                break;
+
+            case R.id.num9:
+                e2.setText(e2.getText()+"9");
+                break;
+
+            case R.id.dot:
+                if(count==0 && e2.length()!=0)
+                {
+                    e2.setText(e2.getText()+".");
+                    count++;
+                }
+                break;
 
             case R.id.clear:
                 e1.setText("");
@@ -144,50 +144,50 @@ public class StandardCal extends AppCompatActivity {
                 }
                 break;
 
-//            case R.id.plus:
-//                operationClicked("+");
-//                break;
-//
-//            case R.id.minus:
-//                operationClicked("-");
-//                break;
-//
-//            case R.id.divide:
-//                operationClicked("/");
-//                break;
-//
-//            case R.id.multiply:
-//                operationClicked("*");
-//                break;
-//
-//            case R.id.sqrt:
-//                if(e2.length()!=0)
-//                {
-//                    text=e2.getText().toString();
-//                    e2.setText("sqrt(" + text + ")");
-//                }
-//                break;
-//
-//            case R.id.square:
-//                if(e2.length()!=0)
-//                {
-//                    text=e2.getText().toString();
-//                    e2.setText("("+text+")^2");
-//                }
-//                operationClicked("+");
-//                break;
-//
-//            case R.id.posneg:
-//                if(e2.length()!=0)
-//                {
-//                    String s=e2.getText().toString();
-//                    char arr[]=s.toCharArray();
-//                    if(arr[0]=='-')
-//                        e2.setText(s.substring(1,s.length()));
-//                    else
-//                        e2.setText("-"+s);
-//                }
-//                break;
+            case R.id.plus:
+                operationClicked("+");
+                break;
+
+            case R.id.minus:
+                operationClicked("-");
+                break;
+
+            case R.id.divide:
+                operationClicked("/");
+                break;
+
+            case R.id.multiply:
+                operationClicked("*");
+                break;
+
+            case R.id.sqrt:
+                if(e2.length()!=0)
+                {
+                    text=e2.getText().toString();
+                    e2.setText("sqrt(" + text + ")");
+                }
+                break;
+
+            case R.id.square:
+                if(e2.length()!=0)
+                {
+                    text=e2.getText().toString();
+                    e2.setText("("+text+")^2");
+                }
+                operationClicked("+");
+                break;
+
+            case R.id.posneg:
+                if(e2.length()!=0)
+                {
+                    String s=e2.getText().toString();
+                    char arr[]=s.toCharArray();
+                    if(arr[0]=='-')
+                        e2.setText(s.substring(1,s.length()));
+                    else
+                        e2.setText("-"+s);
+                }
+                break;
 
             case R.id.equal:
 //                /*for more knowledge on DoubleEvaluator and its tutorial go to the below link
@@ -219,35 +219,41 @@ public class StandardCal extends AppCompatActivity {
 //                }
             int n = Integer.parseInt(e1.getText().toString());
             int k = Integer.parseInt(e2.getText().toString());
-            int C[] = new int[k + 1];
-            // nC0 is 1
-            C[0] = 1;
-            for (int i = 1; i <= n; i++) {
-                // Compute next row of pascal
-                // triangle using the previous row
-                for (int j = Math.min(i, k); j > 0; j--)
-                    C[j] = C[j] + C[j - 1];
-            }
-            e2.setText(Integer.toString(C[k]));
-            e1.setText("");
+
+            e2.setText(Combination(n,k));
+            e1.setText(" ");
             break;
 
-//            case R.id.openBracket:
-//                e1.setText(e1.getText()+"(");
-//                break;
-//
-//            case R.id.closeBracket:
-//                e1.setText(e1.getText()+")");
-//                break;
-//
-//            case R.id.history:
-//                Intent i=new Intent(this,History.class);
-//                i.putExtra("calcName","STANDARD");
-//                startActivity(i);
-//                break;
+            case R.id.openBracket:
+                e1.setText(e1.getText()+"(");
+                break;
+
+            case R.id.closeBracket:
+                e1.setText(e1.getText()+")");
+                break;
+
+            case R.id.history:
+                Intent i=new Intent(this,History.class);
+                i.putExtra("calcName","STANDARD");
+                startActivity(i);
+                break;
         }
     }
 
+    private String Combination(int n,int k)
+    {
+        int C[] = new int[k + 1];
+        // nC0 is 1
+        C[0] = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            // Compute next row of pascal
+            // triangle using the previous row
+            for (int j = Math.min(i, k); j > 0; j--)
+                C[j] = C[j] + C[j - 1];
+        }
+        return Integer.toString(C[k]);
+    }
     private void operationClicked(String op)
     {
         if(e2.length()!=0)

@@ -14,7 +14,7 @@ public class UnitTemperature extends AppCompatActivity {
     private EditText e1,e2;
     private Spinner s1,s2;
     private int count1=0;
-//    private ConvertingUnits.Temperature ca;
+    private ConvertingUnits.Temperature ca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class UnitTemperature extends AppCompatActivity {
         s1=(Spinner)findViewById(R.id.spinner1);
         s2=(Spinner)findViewById(R.id.spinner2);
 
-//        ca=new ConvertingUnits.Temperature();
+        ca=new ConvertingUnits.Temperature();
     }
 
     public void onClick(View v)

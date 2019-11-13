@@ -23,8 +23,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="Area"
-        android:visibility="invisible"
-        tools:visibility="invisible" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="match_parent"
@@ -46,8 +45,7 @@
         android:clickable="false"
         android:onClick="onClick"
         android:text="Weight"
-        android:visibility="invisible"
-        tools:visibility="invisible" />
+        android:visibility="visible" />
 
     <Button
         android:layout_width="match_parent"
