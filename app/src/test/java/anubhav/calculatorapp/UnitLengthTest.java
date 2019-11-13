@@ -21,17 +21,13 @@ public class UnitLengthTest {
     public void evaluate_equalMetric() throws Exception {
 
         //metric 1 and metric2 are same.
-        int choice1 = 3;
-        int choice2 = 3;
+        int choice1 = 10;
+        int choice2 = 10;
         double val = 20.0;
         double expVal = 20.0;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_equalMetric" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_equalMetric",expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -42,13 +38,8 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 0.000000002;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_equalMetric" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_nanoToMeter",expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
     }
 
 
@@ -60,13 +51,8 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 0.002;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_milliToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_milliToMeter", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
     }
 
     @Test
@@ -77,13 +63,22 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 0.02;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_centiToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_centiToMeter",expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToMeter() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 3;
+        double val = 2.0;
+        double expVal = 2.0;
+
+        Assert.assertTrue("evaluate_meterToMeter", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -94,13 +89,9 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 2000.0;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_kiloToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_kiloToMeter",expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -111,13 +102,9 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 78.7402;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_inchToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_inchToMeter", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -128,13 +115,9 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 6.56168;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_footToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_footToMeter", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -145,13 +128,9 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 1.8287988;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_yardToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_yardToMeter",expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
     }
 
     @Test
@@ -162,12 +141,115 @@ public class UnitLengthTest {
         int choice2 = 3;
         double val = 2.0;
         double expVal = 3218.688995;
-        try {
-            Assert.assertTrue(expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
-        }
-        catch (Exception e)
-        {
-            System.out.println("evaluate_yardToMeter" + " failed !!");
-        }
+
+        Assert.assertTrue("evaluate_yardToMeter", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+
+
+    /* *
+    Changing from meter to x metric
+     *  */
+    @Test
+    public void evaluate_meterToNano() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 0;
+        double val = 2.0;
+        double expVal = 2000000000.0;
+
+        Assert.assertTrue("evaluate_meterToNano", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+    @Test
+    public void evaluate_meterToMilli() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 1;
+        double val = 2.0;
+        double expVal = 2000000.0;
+
+        Assert.assertTrue("evaluate_meterToMilli", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToCenti() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 2;
+        double val = 2.0;
+        double expVal = 200.0;
+
+        Assert.assertTrue("evaluate_meterToCenti", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToKilo() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 4;
+        double val = 2.0;
+        double expVal = 0.002;
+
+        Assert.assertTrue("evaluate_meterToKilo", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToInch() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 5;
+        double val = 2.0;
+        double expVal = 78.7402;
+
+        Assert.assertTrue("evaluate_meterToInch", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToFoot() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 6;
+        double val = 2.0;
+        double expVal = 6.56168;
+
+        Assert.assertTrue("evaluate_meterToFoot", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToYard() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 7;
+        double val = 2.0;
+        double expVal = 2.18722;
+
+        Assert.assertTrue("evaluate_meterToYard", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
+
+    }
+
+    @Test
+    public void evaluate_meterToMile() throws Exception {
+
+        //metric 1 and metric2 are same.
+        int choice1 = 3;
+        int choice2 = 8;
+        double val = 2.0;
+        double expVal = .001242742;
+
+        Assert.assertTrue("evaluate_meterToYard", expVal == testObjectUnitLength.evaluate(choice1, choice2, val));
     }
 }//class
