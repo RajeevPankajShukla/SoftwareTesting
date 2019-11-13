@@ -119,41 +119,51 @@ public class UnitArea extends AppCompatActivity {
             switch (item1)
             {
                 case 0:
-                    temp=ca.sqMilliToMeter(value);
+//                    temp=ca.sqMilliToMeter(value);
+                    temp = value/1000000;
                     break;
                 case 1:
-                    temp=ca.sqCentiToMeter(value);
+//                    temp=ca.sqCentiToMeter(value);
+                    temp = value/10000;
                     break;
                 case 2:
                     temp=value;
                     break;
                 case 3:
-                    temp=ca.sqKiloToMeter(value);
+//                    temp=ca.sqKiloToMeter(value);
+                    temp = value*1000000;
                     break;
                 case 4:
-                    temp=ca.AcreToMeter(value);
+//                    temp=ca.AcreToMeter(value);
+                    temp = value*4046.86;
                     break;
                 case 5:
-                    temp=ca.HectareToMeter(value);
+//                    temp=ca.HectareToMeter(value);
+                    temp = value*10000;
                     break;
             }
 
             switch (item2)
             {
                 case 0:
-                    temp= ca.sqMeterToMilli(temp);
+//                    temp= ca.sqMeterToMilli(temp);
+                    temp = temp*1000000;
                     break;
                 case 1:
-                    temp= ca.sqMeterToCenti(temp);
+//                    temp= ca.sqMeterToCenti(temp);
+                    temp = temp*10000;
                     break;
                 case 3:
-                    temp= ca.sqMeterToKilo(temp);
+//                    temp= ca.sqMeterToKilo(temp);
+                    temp = temp/1000000;
                     break;
                 case 4:
-                    temp= ca.sqMeterToAcre(temp);
+//                    temp= ca.sqMeterToAcre(temp);
+                    temp = temp/4046.86;
                     break;
                 case 5:
-                    temp= ca.sqMeterToHectare(temp);
+//                    temp= ca.sqMeterToHectare(temp);
+                    temp = temp/10000;
                     break;
             }
             return temp;
