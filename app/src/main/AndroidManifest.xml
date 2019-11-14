@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="anubhav.calculatorapp">
+    package="MT2018_091_093.calculatorapp">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="MT2018_091_093.calculatorapp.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,35 +19,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StandardCal"
+            android:name="MT2018_091_093.calculatorapp.StandardCal"
             android:label="@string/title_activity_standard_cal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ScientificCal"
+            android:name="MT2018_091_093.calculatorapp.ScientificCal"
             android:label="@string/title_activity_scientific_cal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UnitCoverter"
+            android:name="MT2018_091_093.calculatorapp.UnitCoverter"
             android:label="@string/title_activity_unit_coverter"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UnitArea"
+            android:name="MT2018_091_093.calculatorapp.UnitArea"
             android:label="@string/title_activity_unit_area"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UnitLength"
+            android:name="MT2018_091_093.calculatorapp.UnitLength"
             android:label="@string/title_activity_unit_length"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UnitWeight"
+            android:name="MT2018_091_093.calculatorapp.UnitWeight"
             android:label="@string/title_activity_unit_weight"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UnitTemperature"
+            android:name="MT2018_091_093.calculatorapp.UnitTemperature"
             android:label="@string/title_activity_unit_temperature"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".History"
+            android:name="MT2018_091_093.calculatorapp.History"
             android:label="@string/title_activity_history"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

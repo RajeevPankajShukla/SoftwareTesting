@@ -1,4 +1,4 @@
-package anubhav.calculatorapp;
+package MT2018_091_093.calculatorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
-
-import com.fathzer.soft.javaluator.DoubleEvaluator;
 
 public class StandardCal extends AppCompatActivity {
 

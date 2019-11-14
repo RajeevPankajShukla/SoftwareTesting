@@ -1,11 +1,9 @@
-package anubhav.calculatorapp;
+package MT2018_091_093.calculatorapp;
 
 import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UnitAreaTest
 {

@@ -1,24 +1,22 @@
-package anubhav.calculatorapp;
+package MT2018_091_093.calculatorapp;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class UnitTemperature extends AppCompatActivity {
+public class UnitWeight extends AppCompatActivity {
 
     private EditText e1,e2;
     private Spinner s1,s2;
     private int count1=0;
-    private ConvertingUnits.Temperature ca;
+    private ConvertingUnits.Weight ca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unit_temperature);
+        setContentView(R.layout.activity_unit_weight);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,7 +25,7 @@ public class UnitTemperature extends AppCompatActivity {
         s1=(Spinner)findViewById(R.id.spinner1);
         s2=(Spinner)findViewById(R.id.spinner2);
 
-        ca=new ConvertingUnits.Temperature();
+        ca=new ConvertingUnits.Weight();
     }
 
     public void onClick(View v)
@@ -119,27 +117,67 @@ public class UnitTemperature extends AppCompatActivity {
             switch (item1)
             {
                 case 0:
-//                    temp = ca.CelsiTokelvin(value);
-                    temp = value + 273.15;
+//                    temp = ca.MilliToKilo(value);
+                    temp = (value/1000000);
                     break;
                 case 1:
-//                    temp = ca.FerToKelvin(value);
-                    temp = ((value +459.67)*5/9);
+//                    temp = ca.CentiToKilo(value);
+                    temp = (value/100000);
                     break;
                 case 2:
+//                    temp = ca.DeciToKilo(value);
+                    temp = (value/10000);
+                    break;
+                case 3:
+//                    temp=ca.GramToKilo(value);
+                    temp = (value/1000);
+                    break;
+                case 4:
                     temp=value;
+                    break;
+                case 5:
+//                    temp=ca.MetricTonnesToKilo(value);
+                    temp = (value*1000);
+                    break;
+                case 6:
+//                    temp = ca.PoundsToKilo(value);
+                    temp =(value/2.20462);
+                    break;
+                case 7:
+//                    temp = ca.OuncesToKilo(value);
+                    temp =(value/35.274);
                     break;
             }
 
             switch (item2)
             {
                 case 0:
-//                    temp = ca.KelvinToCelsi(temp);
-                    temp = (temp-273.15);
+//                    temp = ca.KiloToMilli(temp);
+                    temp = (temp*1000000);
                     break;
                 case 1:
-//                    temp=ca.KelvinToFer(temp);
-                    temp = ((temp*9/5)-459.67);
+//                    temp = ca.KiloToCenti(temp);
+                    temp = (temp*100000);
+                    break;
+                case 2:
+//                    temp = ca.KiloToDeci(temp);
+                    temp = (temp*10000);
+                    break;
+                case 3:
+//                    temp = ca.KiloToGram(temp);
+                    temp = (temp*1000);
+                    break;
+                case 5:
+//                    temp = ca.KiloToMetricTonnes(temp);
+                    temp = (temp/1000);
+                    break;
+                case 6:
+//                    temp = ca.KiloToPounds(temp);
+                    temp = (temp*2.20462);
+                    break;
+                case 7:
+//                    temp = ca.KiloToOunces(temp);
+                    temp = (temp*35.274);
                     break;
             }
             return temp;

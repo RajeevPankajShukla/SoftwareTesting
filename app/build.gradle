@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "anubhav.calculatorapp"
+        applicationId "MT2018_091_093.calculatorapp"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

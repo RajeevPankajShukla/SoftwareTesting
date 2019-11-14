@@ -5,8 +5,8 @@
     <string name="sciCal">Factorial</string>
     <string name="unitCal">Unit Converter</string>
     <string name="FullCal">MT2018_091_093</string>
-    <string name="title_activity_standard_cal">StandardCal</string>
-    <string name="title_activity_scientific_cal">ScientificCal</string>
+    <string name="title_activity_standard_cal">C(N,R)</string>
+    <string name="title_activity_scientific_cal">Factorial</string>
     <string name="title_activity_unit_coverter">UnitCoverter</string>
     <string name="clear">C</string>
     <string name="backspace">⌫</string>

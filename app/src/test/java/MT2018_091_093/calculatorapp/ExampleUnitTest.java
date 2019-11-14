@@ -1,8 +1,4 @@
-package anubhav.calculatorapp;
-
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+package MT2018_091_093.calculatorapp;
 
 /**
  * To work on unit tests, switch the Test Artifact in the Build Variants view.
