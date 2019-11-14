@@ -57,7 +57,7 @@ public class UnitTemperatureTest
         int choice1 = 2;
         int choice2 = 0;
 
-        double val = 273.15;
+        double val = 274.15;
         double expVal = 1.0;
 
         Assert.assertTrue("evaluate_KelvinToCelsius" + " failed !!",expVal == testObjectUnitTemp.evaluate(choice1, choice2, val));
