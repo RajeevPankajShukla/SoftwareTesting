@@ -1,9 +1,5 @@
 package MT2018_091_093.calculatorapp;
 
-/**
- * Created by Anubhav on 16-03-2016.
- */
-
 //Class to convert from one unit to SI unit
 public class ConvertingUnits
 {

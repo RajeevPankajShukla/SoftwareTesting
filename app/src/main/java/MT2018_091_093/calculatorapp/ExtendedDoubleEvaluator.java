@@ -1,9 +1,5 @@
 package MT2018_091_093.calculatorapp;
 
-/**
- * Created by Anubhav on 13-03-2016.
- */
-
 import java.util.Iterator;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
